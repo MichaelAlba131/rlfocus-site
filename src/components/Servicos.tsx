@@ -1,4 +1,5 @@
 import { PRECISAO, SEGURANCA, type Servico } from '../conteudo'
+import Balanca from './Balanca'
 
 function Lado({ tom, titulo, sub, itens }: { tom: 'claro' | 'escuro'; titulo: string; sub: string; itens: Servico[] }) {
   return (
@@ -22,6 +23,7 @@ export default function Servicos() {
       <div className="secao-topo secao-topo--centro">
         <p className="rotulo">Serviços</p>
         <h2 className="serif">Dois lados, um equilíbrio.</h2>
+        <Balanca />
         <p>A precisão do dia a dia contábil e fiscal, e a segurança de quem audita, controla e responde ao regulador. A RLFOCUS entrega os dois com a mesma equipe.</p>
       </div>
       <div className="lados">

@@ -1,5 +1,6 @@
 import { useEffect, useState, type FormEvent } from 'react'
 import { EMAIL, INSTAGRAM, SOCIOS, WHATSAPP_COMERCIAL } from '../conteudo'
+import Conversa from './Conversa'
 
 // O site é estático (HostGator, sem backend de formulário): a mensagem abre no WhatsApp comercial
 // já escrita com os dados preenchidos. O e-mail continua como alternativa na coluna ao lado.
@@ -48,7 +49,7 @@ export default function Contato({ assunto }: { assunto: string }) {
         <div className="secao-topo">
           <p className="rotulo">Contato</p>
           <h2 className="serif">Vamos conversar sobre a sua empresa.</h2>
-          <p>Conte em poucas linhas o que precisa. Um dos sócios responde diretamente.</p>
+          <p>Conte em poucas linhas o que precisa. A mensagem chega no WhatsApp de um sócio, que responde diretamente.</p>
         </div>
         <div className="campos">
           {campo('nome', 'text', 'Nome', 'name')}
@@ -58,10 +59,12 @@ export default function Contato({ assunto }: { assunto: string }) {
         </div>
         <label><span className="sr">Mensagem</span><textarea name="mensagem" rows={4} placeholder="Mensagem" value={c.mensagem} onChange={muda('mensagem')} /></label>
         <div className="contato__enviar">
-          <span className={`contato__aviso${aviso?.erro ? ' erro' : ''}`} role="status">{aviso?.texto ?? 'Campos com * são obrigatórios. A mensagem abre no WhatsApp de um dos sócios.'}</span>
-          <button type="submit" className="btn btn--dark">Enviar mensagem</button>
+          <span className={`contato__aviso${aviso?.erro ? ' erro' : ''}`} role="status">{aviso?.texto ?? 'Campos com * são obrigatórios.'}</span>
+          <button type="submit" className="btn btn--dark">Enviar pelo WhatsApp</button>
         </div>
       </form>
+      <div className="contato__lado">
+      <Conversa />
       <div className="contato__dados">
         <div className="dado"><p className="rotulo">E-mail</p><a className="dado__grande" href={`mailto:${EMAIL}`}>{EMAIL}</a></div>
         <div className="dado">
@@ -70,6 +73,7 @@ export default function Contato({ assunto }: { assunto: string }) {
         </div>
         <div className="dado"><p className="rotulo">Atendimento</p><p>Jacareí, SP, e remoto em todo o Brasil</p></div>
         <div className="dado"><p className="rotulo">Instagram</p><a className="dado__instagram" href={INSTAGRAM.url} target="_blank" rel="noopener">{INSTAGRAM.usuario}</a></div>
+      </div>
       </div>
     </section>
   )

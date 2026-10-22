@@ -11,10 +11,13 @@ export default function Socios() {
         <p>Sem camadas entre você e quem decide. Cada projeto é conduzido diretamente por um dos sócios.</p>
       </div>
       <div className="socios__grade">
-        {SOCIOS.map(s => (
+        {SOCIOS.map((s, i) => (
           <article key={s.nome} className="socio">
             <div className="socio__foto"><img src={s.foto} alt={s.nome} width={s.largura} height={s.altura} loading="lazy" /></div>
             <h3>{s.nome}</h3>
+            <svg className="socio__traco" width="220" height="34" viewBox="0 0 220 34" fill="none" aria-hidden="true">
+              <path d={s.traco} stroke="#f2a96b" strokeWidth="2" strokeLinecap="round" style={{ animationDelay: `${i * 0.8}s` }} />
+            </svg>
             <p className="socio__cargo">Sócio executivo</p>
             <p>{s.bio}</p>
             <ul className="selos">{s.selos.map(x => <li key={x}>{x}</li>)}</ul>
