@@ -1,0 +1,10 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html", "title": "Desktop", "x": 0, "y": 0, "w": 1440, "h": 4520 },
+    { "file": "Mobile.dc.html", "title": "Celular", "x": 1560, "y": 0, "w": 390, "h": 5620 }
+  ],
+  "annotations": [
+    { "id": "conceito", "x": 0, "y": -170, "w": 520, "text": "Conceito de equilíbrio: cada bloco alterna preto e branco, sem símbolo literal (retirado a pedido do Michael). Lado claro = Precisão (contabilidade, tributos, folha). Lado escuro = Segurança (auditoria, compliance, consultoria). Um único tom quente, tirado do logo, marca os números e os sócios.\nFotos dos sócios: as do site atual, coloridas (decisão do Michael)." }
+  ],
+  "launch": { "view": "canvas" }
+}

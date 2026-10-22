@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.DS_Store
+# material de trabalho (fotos em tamanho original, PDF da proposta, prints com imagens embutidas)
+fotos-originais/
+pdf/
+design/print-*.html
+design/rlfocus-landing.html
+*.tsbuildinfo

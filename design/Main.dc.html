@@ -1,0 +1,280 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700&display=swap">
+  <style>
+    body { margin: 0; background: #fbfaf8; color: #121212; font-family: 'Manrope', 'Helvetica Neue', Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: #b8763a; }
+    .serif { font-family: 'Cormorant Garamond', 'Times New Roman', Georgia, serif; }
+    .btn-dark:hover { background: #2a2a2a !important; }
+    .btn-light:hover { background: #eeeae3 !important; }
+    .btn-accent:hover { background: #d9955a !important; }
+    .svc:hover { background: rgba(0,0,0,0.03); }
+    .svc-dark:hover { background: rgba(255,255,255,0.05); }
+    input::placeholder, textarea::placeholder { color: #9a9a9a; }
+  </style>
+</helmet>
+
+<div style="width: 1440px; background: #fbfaf8; overflow: hidden;">
+
+  <!-- ===== NAV (yin: preto) ===== -->
+  <div style="background: #0e0e0e; color: #ffffff; display: flex; align-items: center; justify-content: space-between; padding: 22px 96px; border-bottom: 1px solid #262626;">
+    <img src="logo.png" alt="RLFOCUS Auditoria e Soluções Contábeis" style="height: 52px; width: auto; display: block;">
+    <div style="display: flex; align-items: center; gap: 36px; font-size: 14px; font-weight: 500; letter-spacing: 0.02em; color: #d9d6d0;">
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">A RLFOCUS</a>
+      <a href="#socios">Sócios</a>
+      <a href="#contato">Contato</a>
+      <a href="#contato" class="btn-light" style="background: #ffffff; color: #0e0e0e; padding: 12px 22px; font-weight: 700; font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase;">Falar com um sócio</a>
+    </div>
+  </div>
+
+  <!-- ===== HERO dividido: branco (precisão) | preto (segurança) ===== -->
+  <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); min-height: 720px;">
+    <div style="background: #fbfaf8; padding: 112px 80px 96px 96px; display: flex; flex-direction: column; justify-content: center; gap: 32px;">
+      <div style="display: flex; align-items: center; font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #6b6b6b;">
+        <span>Auditoria e soluções contábeis</span>
+      </div>
+      <h1 class="serif" style="margin: 0; font-size: 72px; line-height: 1.02; font-weight: 500; letter-spacing: -0.01em; color: #121212; text-wrap: balance;">Precisão nos números.<br>Segurança nas decisões.</h1>
+      <p style="margin: 0; font-size: 19px; line-height: 1.55; color: #4a4a4a; max-width: 520px; text-wrap: pretty;">Auditoria, contabilidade e compliance para empresas que operam em setores regulados e não podem errar. Conduzido por sócios com mais de vinte anos em bancos, cooperativas e seguradoras.</p>
+      <div style="display: flex; align-items: center; gap: 16px; margin-top: 8px;">
+        <a href="#contato" class="btn-dark" style="background: #0e0e0e; color: #ffffff; padding: 18px 30px; font-size: 14px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;">Agendar uma conversa</a>
+        <a href="#servicos" style="padding: 18px 8px; font-size: 14px; font-weight: 600; color: #121212; border-bottom: 1px solid #121212;">Conhecer os serviços</a>
+      </div>
+    </div>
+    <div style="background: #0e0e0e; color: #ffffff; padding: 112px 96px 96px 80px; display: flex; flex-direction: column; justify-content: center; gap: 0; position: relative;">
+      <svg width="520" height="433" viewBox="0 0 120 100" fill="none" aria-hidden="true" style="position: absolute; right: -60px; bottom: -70px; opacity: 0.07;"><path d="M6 46 L34 90 L118 6" stroke="#f2a96b" stroke-width="10" stroke-linecap="square" stroke-linejoin="miter"></path><rect x="62" y="56" width="16" height="34" fill="#f2a96b"></rect><rect x="86" y="40" width="16" height="50" fill="#f2a96b"></rect><rect x="110" y="24" width="10" height="66" fill="#f2a96b"></rect></svg>
+      <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #9a9a9a; margin-bottom: 36px; position: relative;">Por que a RLFOCUS</div>
+      <div style="display: flex; flex-direction: column; gap: 0; position: relative;">
+        <div style="display: flex; gap: 24px; padding: 26px 0; border-top: 1px solid #2c2c2c;">
+          <div class="serif" style="font-size: 44px; line-height: 1; color: #f2a96b; min-width: 96px; font-weight: 600;">+20</div>
+          <div style="font-size: 16px; line-height: 1.5; color: #d9d6d0; text-wrap: pretty;">anos de auditoria, controles internos e contabilidade em cada um dos sócios</div>
+        </div>
+        <div style="display: flex; gap: 24px; padding: 26px 0; border-top: 1px solid #2c2c2c;">
+          <div class="serif" style="font-size: 44px; line-height: 1; color: #f2a96b; min-width: 96px; font-weight: 600;">BC</div>
+          <div style="font-size: 16px; line-height: 1.5; color: #d9d6d0; text-wrap: pretty;">responsável técnico cadastrado no Banco Central para conduzir auditoria cooperativa</div>
+        </div>
+        <div style="display: flex; gap: 24px; padding: 26px 0; border-top: 1px solid #2c2c2c; border-bottom: 1px solid #2c2c2c;">
+          <div class="serif" style="font-size: 44px; line-height: 1; color: #f2a96b; min-width: 96px; font-weight: 600;">3</div>
+          <div style="font-size: 16px; line-height: 1.5; color: #d9d6d0; text-wrap: pretty;">sócios executivos com passagem por BACEN, SUSEP, bancos, cooperativas e multinacionais</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== REFORMA TRIBUTÁRIA: o gancho de 2027 ===== -->
+  <div id="reforma" style="background: #0e0e0e; color: #ffffff; border-top: 1px solid #262626; padding: 72px 96px; display: grid; grid-template-columns: 300px minmax(0, 1fr) auto; gap: 56px; align-items: center;">
+    <div style="display: flex; flex-direction: column; gap: 6px;">
+      <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #9a9a9a;">Reforma tributária</div>
+      <div class="serif" style="font-size: 72px; line-height: 1; font-weight: 600; color: #f2a96b; letter-spacing: -0.01em;">Jan 2027</div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 14px;">
+      <div class="serif" style="font-size: 34px; line-height: 1.15; font-weight: 500; color: #ffffff; text-wrap: balance;">A CBS substitui PIS e Cofins. Sua empresa já sabe o que muda no caixa, no preço e no sistema?</div>
+      <div style="font-size: 14px; line-height: 1.6; color: #b5b1aa;">2026 é o ano de teste. Em 2027 entram a CBS e o Imposto Seletivo. De 2029 a 2032 o IBS assume o lugar de ICMS e ISS, extintos em 2033. Quem mapeia agora escolhe o caminho; quem espera, corre atrás.</div>
+    </div>
+    <a href="#contato" class="btn-accent" style="background: #f2a96b; color: #0e0e0e; padding: 18px 28px; font-size: 14px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; white-space: nowrap;">Pedir um diagnóstico da reforma</a>
+  </div>
+
+  <!-- ===== SERVIÇOS: dois lados, um equilíbrio ===== -->
+  <div id="servicos" style="padding: 112px 96px 0 96px; display: flex; flex-direction: column; align-items: center; gap: 18px; text-align: center;">
+    <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #6b6b6b;">Serviços</div>
+    <h2 class="serif" style="margin: 0; font-size: 54px; line-height: 1.05; font-weight: 500; color: #121212;">Dois lados, um equilíbrio.</h2>
+    <p style="margin: 0; font-size: 18px; line-height: 1.55; color: #4a4a4a; max-width: 640px; text-wrap: pretty;">A precisão do dia a dia contábil e fiscal, e a segurança de quem audita, controla e responde ao regulador. A RLFOCUS entrega os dois com a mesma equipe.</p>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 64px;">
+    <!-- Lado claro: precisão -->
+    <div style="background: #ffffff; padding: 72px 72px 72px 96px; border-top: 1px solid #121212;">
+      <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 40px;">
+        <span class="serif" style="font-size: 40px; font-weight: 600; color: #121212;">Precisão</span>
+        <span style="font-size: 13px; font-weight: 600; color: #6b6b6b; letter-spacing: 0.08em; text-transform: uppercase;">Operação e obrigações</span>
+      </div>
+      <div style="display: flex; flex-direction: column;">
+        <div class="svc" style="padding: 26px 0; border-top: 1px solid #e3e0da; display: flex; flex-direction: column; gap: 8px;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="font-size: 20px; font-weight: 600; color: #121212;">Tributos e Planejamento Fiscal</div>
+            <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #b8763a; border: 1px solid #f2a96b; padding: 4px 8px;">Reforma 2027</span>
+          </div>
+          <div style="font-size: 15px; line-height: 1.55; color: #5a5a5a; text-wrap: pretty;">Otimização da carga tributária, regularização de obrigações e aproveitamento de incentivos legais. Inclui o diagnóstico e a transição para CBS e IBS.</div>
+        </div>
+        <div class="svc" style="padding: 26px 0; border-top: 1px solid #e3e0da; display: flex; flex-direction: column; gap: 8px;">
+          <div style="font-size: 20px; font-weight: 600; color: #121212;">Contabilidade e Gestão Financeira</div>
+          <div style="font-size: 15px; line-height: 1.55; color: #5a5a5a; text-wrap: pretty;">Contabilidade estratégica e precisa, com relatórios que sustentam a tomada de decisão.</div>
+        </div>
+        <div class="svc" style="padding: 26px 0; border-top: 1px solid #e3e0da; border-bottom: 1px solid #e3e0da; display: flex; flex-direction: column; gap: 8px;">
+          <div style="font-size: 20px; font-weight: 600; color: #121212;">Folha de Pagamento e Departamento Pessoal</div>
+          <div style="font-size: 15px; line-height: 1.55; color: #5a5a5a; text-wrap: pretty;">Processamento de folha, obrigações acessórias, consultoria em legislação e apoio a cálculos e perícias trabalhistas.</div>
+        </div>
+      </div>
+    </div>
+    <!-- Lado escuro: segurança -->
+    <div style="background: #0e0e0e; color: #ffffff; padding: 72px 96px 72px 72px; border-top: 1px solid #0e0e0e;">
+      <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 40px;">
+        <span class="serif" style="font-size: 40px; font-weight: 600; color: #ffffff;">Segurança</span>
+        <span style="font-size: 13px; font-weight: 600; color: #9a9a9a; letter-spacing: 0.08em; text-transform: uppercase;">Governança e risco</span>
+      </div>
+      <div style="display: flex; flex-direction: column;">
+        <div class="svc-dark" style="padding: 26px 0; border-top: 1px solid #2c2c2c; display: flex; flex-direction: column; gap: 8px;">
+          <div style="font-size: 20px; font-weight: 600; color: #ffffff;">Auditoria Contábil e Auditoria de TI</div>
+          <div style="font-size: 15px; line-height: 1.55; color: #b5b1aa; text-wrap: pretty;">Auditorias detalhadas que asseguram a integridade dos processos e fortalecem a governança corporativa.</div>
+        </div>
+        <div class="svc-dark" style="padding: 26px 0; border-top: 1px solid #2c2c2c; display: flex; flex-direction: column; gap: 8px;">
+          <div style="font-size: 20px; font-weight: 600; color: #ffffff;">Compliance e Gestão de Riscos</div>
+          <div style="font-size: 15px; line-height: 1.55; color: #b5b1aa; text-wrap: pretty;">Conformidade regulatória, proteção de dados e prevenção a fraudes, integradas ao negócio.</div>
+        </div>
+        <div class="svc-dark" style="padding: 26px 0; border-top: 1px solid #2c2c2c; border-bottom: 1px solid #2c2c2c; display: flex; flex-direction: column; gap: 8px;">
+          <div style="font-size: 20px; font-weight: 600; color: #ffffff;">Consultoria Estratégica e Empresarial</div>
+          <div style="font-size: 15px; line-height: 1.55; color: #b5b1aa; text-wrap: pretty;">Planejamento para fortalecer a governança, otimizar a performance e expandir mercados com segurança.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== A RLFOCUS: princípios ===== -->
+  <div id="sobre" style="padding: 112px 96px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 96px; align-items: start;">
+    <div style="display: flex; flex-direction: column; gap: 22px;">
+      <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #6b6b6b;">A RLFOCUS</div>
+      <h2 class="serif" style="margin: 0; font-size: 50px; line-height: 1.08; font-weight: 500; color: #121212; text-wrap: balance;">Números viram inteligência quando alguém responde por eles.</h2>
+      <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4a4a4a; text-wrap: pretty;">Somos uma firma de auditoria e soluções contábeis fundada por três sócios que passaram duas décadas dentro de bancos, cooperativas, seguradoras e multinacionais. Trazemos para o seu negócio o rigor que aprendemos diante do regulador, com soluções contábeis, fiscais e financeiras integradas, para decisões mais assertivas e crescimento sustentável.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; border-top: 1px solid #121212;">
+      <div style="padding: 28px 28px 28px 0; border-bottom: 1px solid #e3e0da; border-right: 1px solid #e3e0da; display: flex; flex-direction: column; gap: 10px;">
+        <div class="serif" style="font-size: 28px; font-weight: 600; color: #121212;">Comprometimento</div>
+        <div style="font-size: 15px; line-height: 1.55; color: #5a5a5a;">O foco é o sucesso e a tranquilidade de quem confia a empresa a nós.</div>
+      </div>
+      <div style="padding: 28px 0 28px 28px; border-bottom: 1px solid #e3e0da; display: flex; flex-direction: column; gap: 10px;">
+        <div class="serif" style="font-size: 28px; font-weight: 600; color: #121212;">Excelência</div>
+        <div style="font-size: 15px; line-height: 1.55; color: #5a5a5a;">Serviços que superam a expectativa, com segurança e transparência na gestão.</div>
+      </div>
+      <div style="padding: 28px 28px 28px 0; border-right: 1px solid #e3e0da; display: flex; flex-direction: column; gap: 10px;">
+        <div class="serif" style="font-size: 28px; font-weight: 600; color: #121212;">Inovação</div>
+        <div style="font-size: 15px; line-height: 1.55; color: #5a5a5a;">Tecnologia e processos modernos, adaptados à realidade de cada cliente.</div>
+      </div>
+      <div style="padding: 28px 0 28px 28px; display: flex; flex-direction: column; gap: 10px;">
+        <div class="serif" style="font-size: 28px; font-weight: 600; color: #121212;">Integridade</div>
+        <div style="font-size: 15px; line-height: 1.55; color: #5a5a5a;">Confidencialidade e ética em cada interação, para relações de confiança duradouras.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SÓCIOS (fundo preto) ===== -->
+  <div id="socios" style="background: #0e0e0e; color: #ffffff; padding: 112px 96px;">
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 48px; margin-bottom: 56px;">
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #9a9a9a;">Sócios executivos</div>
+        <h2 class="serif" style="margin: 0; font-size: 50px; line-height: 1.08; font-weight: 500; color: #ffffff;">Quem assina o trabalho.</h2>
+      </div>
+      <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #b5b1aa; max-width: 440px; text-wrap: pretty;">Sem camadas entre você e quem decide. Cada projeto é conduzido diretamente por um dos sócios.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px;">
+      <div style="border-top: 1px solid #3a3a3a; padding-top: 28px; display: flex; flex-direction: column; gap: 18px;">
+        <div style="width: 88px; height: 88px; border-radius: 50%; border: 1px solid #f2a96b; padding: 3px; box-sizing: border-box;"><img src="rafael.jpg" alt="Rafael Cavalheri Alexandre" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; object-position: 50% 20%; display: block;"></div>
+        <div style="display: flex; flex-direction: column; gap: 4px;">
+          <div style="font-size: 22px; font-weight: 600; color: #ffffff;">Rafael Cavalheri Alexandre</div>
+          <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #9a9a9a;">Sócio executivo</div>
+        </div>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #b5b1aa; text-wrap: pretty;">Especialista em governança, risco e compliance, com mais de 19 anos em auditoria contábil e de TI em bancos, cooperativas e seguradoras. Cadastrado no Banco Central como responsável técnico por auditoria cooperativa.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span style="font-size: 12px; font-weight: 600; color: #d9d6d0; border: 1px solid #3a3a3a; padding: 6px 10px;">CNAI QTG</span>
+          <span style="font-size: 12px; font-weight: 600; color: #d9d6d0; border: 1px solid #3a3a3a; padding: 6px 10px;">BCB</span>
+          <span style="font-size: 12px; font-weight: 600; color: #d9d6d0; border: 1px solid #3a3a3a; padding: 6px 10px;">COBIT</span>
+          <span style="font-size: 12px; font-weight: 600; color: #d9d6d0; border: 1px solid #3a3a3a; padding: 6px 10px;">ISO/IEC Auditor Líder</span>
+        </div>
+      </div>
+      <div style="border-top: 1px solid #3a3a3a; padding-top: 28px; display: flex; flex-direction: column; gap: 18px;">
+        <div style="width: 88px; height: 88px; border-radius: 50%; border: 1px solid #f2a96b; padding: 3px; box-sizing: border-box;"><img src="cappi.jpg" alt="Luis Fernando Cappi Monteiro" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; object-position: 50% 20%; display: block;"></div>
+        <div style="display: flex; flex-direction: column; gap: 4px;">
+          <div style="font-size: 22px; font-weight: 600; color: #ffffff;">Luis Fernando Cappi Monteiro</div>
+          <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #9a9a9a;">Sócio executivo</div>
+        </div>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #b5b1aa; text-wrap: pretty;">Mais de 20 anos em posições de liderança em auditoria, controles internos, finanças e contabilidade. Conduziu auditorias e reestruturou processos financeiros em grandes organizações, em interlocução direta com BACEN e SUSEP.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span style="font-size: 12px; font-weight: 600; color: #d9d6d0; border: 1px solid #3a3a3a; padding: 6px 10px;">Controles internos</span>
+          <span style="font-size: 12px; font-weight: 600; color: #d9d6d0; border: 1px solid #3a3a3a; padding: 6px 10px;">BACEN</span>
+          <span style="font-size: 12px; font-weight: 600; color: #d9d6d0; border: 1px solid #3a3a3a; padding: 6px 10px;">SUSEP</span>
+        </div>
+      </div>
+      <div style="border-top: 1px solid #3a3a3a; padding-top: 28px; display: flex; flex-direction: column; gap: 18px;">
+        <div style="width: 88px; height: 88px; border-radius: 50%; border: 1px solid #f2a96b; padding: 3px; box-sizing: border-box;"><img src="depaula.jpg" alt="Luiz Fernando de Paula" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; object-position: 50% 20%; display: block;"></div>
+        <div style="display: flex; flex-direction: column; gap: 4px;">
+          <div style="font-size: 22px; font-weight: 600; color: #ffffff;">Luiz Fernando de Paula</div>
+          <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #9a9a9a;">Sócio executivo</div>
+        </div>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #b5b1aa; text-wrap: pretty;">Contador, gestor tributário e controller, com mais de 20 anos nas áreas administrativa, financeira e estratégica de multinacionais. Especialista em controle orçamentário, otimização de custos e demonstrações contábeis.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span style="font-size: 12px; font-weight: 600; color: #d9d6d0; border: 1px solid #3a3a3a; padding: 6px 10px;">Controller</span>
+          <span style="font-size: 12px; font-weight: 600; color: #d9d6d0; border: 1px solid #3a3a3a; padding: 6px 10px;">Gestão tributária</span>
+          <span style="font-size: 12px; font-weight: 600; color: #d9d6d0; border: 1px solid #3a3a3a; padding: 6px 10px;">Corretor SUSEP</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CONTATO ===== -->
+  <div id="contato" style="padding: 112px 96px; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 96px; align-items: start;">
+    <div style="display: flex; flex-direction: column; gap: 28px;">
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #6b6b6b;">Contato</div>
+        <h2 class="serif" style="margin: 0; font-size: 50px; line-height: 1.08; font-weight: 500; color: #121212; text-wrap: balance;">Vamos conversar sobre a sua empresa.</h2>
+        <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #4a4a4a; max-width: 520px;">Conte em poucas linhas o que precisa. Um dos sócios responde diretamente.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px;">
+        <input type="text" placeholder="Nome *" style="font-family: inherit; font-size: 15px; padding: 16px 0; border: 0; border-bottom: 1px solid #121212; background: transparent; color: #121212; outline: none;">
+        <input type="email" placeholder="E-mail *" style="font-family: inherit; font-size: 15px; padding: 16px 0; border: 0; border-bottom: 1px solid #121212; background: transparent; color: #121212; outline: none;">
+        <input type="tel" placeholder="Telefone *" style="font-family: inherit; font-size: 15px; padding: 16px 0; border: 0; border-bottom: 1px solid #121212; background: transparent; color: #121212; outline: none;">
+        <input type="text" placeholder="Empresa" style="font-family: inherit; font-size: 15px; padding: 16px 0; border: 0; border-bottom: 1px solid #121212; background: transparent; color: #121212; outline: none;">
+      </div>
+      <textarea placeholder="Mensagem" rows="4" style="font-family: inherit; font-size: 15px; padding: 16px 0; border: 0; border-bottom: 1px solid #121212; background: transparent; color: #121212; outline: none; resize: vertical;"></textarea>
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+        <span style="font-size: 12px; color: #8a8a8a;">Campos com * são obrigatórios.</span>
+        <a href="#contato" class="btn-dark" style="background: #0e0e0e; color: #ffffff; padding: 18px 30px; font-size: 14px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;">Enviar mensagem</a>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; border-top: 1px solid #121212;">
+      <div style="padding: 24px 0; border-bottom: 1px solid #e3e0da; display: flex; flex-direction: column; gap: 6px;">
+        <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #6b6b6b;">E-mail</div>
+        <a href="mailto:contato@rlfocus.com.br" style="font-size: 20px; font-weight: 600; color: #121212;">contato@rlfocus.com.br</a>
+      </div>
+      <div style="padding: 24px 0; border-bottom: 1px solid #e3e0da; display: flex; flex-direction: column; gap: 12px;">
+        <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #6b6b6b;">Telefones</div>
+        <div style="display: flex; justify-content: space-between; gap: 16px; font-size: 16px;"><span style="font-weight: 600; color: #121212;">(61) 99171-0638</span><span style="color: #6b6b6b;">Rafael Cavalheri</span></div>
+        <div style="display: flex; justify-content: space-between; gap: 16px; font-size: 16px;"><span style="font-weight: 600; color: #121212;">(12) 99187-6712</span><span style="color: #6b6b6b;">Luis Fernando Cappi</span></div>
+        <div style="display: flex; justify-content: space-between; gap: 16px; font-size: 16px;"><span style="font-weight: 600; color: #121212;">(11) 98140-0879</span><span style="color: #6b6b6b;">Luiz Fernando de Paula</span></div>
+      </div>
+      <div style="padding: 24px 0; border-bottom: 1px solid #e3e0da; display: flex; flex-direction: column; gap: 6px;">
+        <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #6b6b6b;">Endereço</div>
+        <div style="font-size: 16px; line-height: 1.5; color: #121212;">Av. Carlos Drummond de Andrade, 153<br>Jd. Santa Maria, Jacareí, SP</div>
+      </div>
+      <div style="padding: 24px 0; display: flex; flex-direction: column; gap: 6px;">
+        <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #6b6b6b;">Instagram</div>
+        <a href="https://www.instagram.com/rlfocus_/" style="font-size: 16px; font-weight: 600; color: #121212;">@rlfocus_</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== RODAPÉ ===== -->
+  <div style="background: #0e0e0e; color: #9a9a9a; padding: 40px 96px; display: flex; align-items: center; justify-content: space-between; gap: 32px; font-size: 13px;">
+    <div style="display: flex; flex-direction: column; gap: 4px;">
+      <div style="color: #ffffff; font-weight: 600;">RLFOCUS AUDITORIA E SOLUÇÕES CONTÁBEIS LTDA</div>
+      <div>CNPJ 38.244.866/0001-10 · Jacareí, SP</div>
+    </div>
+    <div style="display: flex; gap: 28px;">
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">A RLFOCUS</a>
+      <a href="#socios">Sócios</a>
+      <a href="#contato">Contato</a>
+    </div>
+    <div>© 2026 RLFOCUS LTDA. Todos os direitos reservados.</div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>
