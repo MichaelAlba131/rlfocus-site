@@ -7,8 +7,8 @@ export const INSTAGRAM = { usuario: '@rlfocus_', url: 'https://www.instagram.com
 
 export const MENU = [
   { href: '#servicos', rotulo: 'Serviços' },
+  { href: '#contabilidade', rotulo: 'Contabilidade' },
   { href: '#como', rotulo: 'Como trabalhamos' },
-  { href: '#sobre', rotulo: 'A RLFOCUS' },
   { href: '#socios', rotulo: 'Sócios' },
   { href: '#contato', rotulo: 'Contato' },
 ]
@@ -58,7 +58,7 @@ export type Servico = { titulo: string; texto: string; etiqueta?: string }
 export const PRECISAO: Servico[] = [
   { titulo: 'Tributos e Planejamento Fiscal', etiqueta: 'Reforma 2027', texto: 'Otimização da carga tributária, regularização de obrigações e aproveitamento de incentivos legais. Inclui o diagnóstico e a transição para CBS e IBS.' },
   { titulo: 'Contabilidade e Gestão Financeira', texto: 'Contabilidade estratégica e precisa, com relatórios que sustentam a tomada de decisão.' },
-  { titulo: 'Folha de Pagamento e Departamento Pessoal', texto: 'Processamento de folha, obrigações acessórias, consultoria em legislação e apoio a cálculos e perícias trabalhistas.' },
+  { titulo: 'Folha de Pagamento e Departamento Pessoal', etiqueta: 'Escala 5x2', texto: 'Processamento de folha, obrigações acessórias, consultoria em legislação e apoio a cálculos e perícias trabalhistas.' },
 ]
 
 export const SEGURANCA: Servico[] = [
@@ -95,4 +95,30 @@ export const SOCIOS: Socio[] = [
     selos: ['Controller', 'Gestão tributária', 'Corretor SUSEP'], fone: '(11) 98140-0879', whatsapp: '5511981400879',
     traco: 'M4 22 C28 8, 52 30, 76 14 S118 4, 142 22 S182 26, 216 8',
   },
+]
+
+// Escala 5x2 (fim da 6x1, Emenda Constitucional 141, promulgada em 16/10/2026). Dias: true = trabalho.
+export const ESCALA = [
+  { id: 'hoje', chip: 'Hoje', horas: 44, rotulo: 'Escala 6x1', dias: [true, true, true, true, true, true, false], texto: 'Até 44 horas por semana, com um dia de descanso. A escala 6x1 ainda é comum em indústria, varejo, saúde e logística.' },
+  { id: '42', chip: 'Dez/2026', horas: 42, rotulo: 'Dois dias de descanso', dias: [true, true, true, true, true, false, false], texto: 'Em meados de dezembro a jornada máxima cai para 42 horas e o descanso passa a ser de dois dias por semana, sem redução de salário. Escalas, turnos e banco de horas precisam ser refeitos.' },
+  { id: '40', chip: 'Fim de 2027', horas: 40, rotulo: 'Até 8 horas por dia', dias: [true, true, true, true, true, false, false], texto: 'A jornada chega a 40 horas por semana. O custo por hora trabalhada sobe; quem simulou antes escolhe a saída mais barata entre escala nova, banco de horas e contratação.' },
+]
+export const DIAS = ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom']
+
+// Contabilidade do dia a dia (pedido do Fernando, 22/10/2026: "faltou conteúdo de contabilidade, abertura de CNPJ").
+export const ABERTURA = [
+  'Consulta de viabilidade do nome e do endereço',
+  'Contrato social e registro na Junta Comercial',
+  'CNPJ na Receita Federal',
+  'Inscrições estadual e municipal',
+  'Alvará e licenças',
+  'Pronta para emitir nota fiscal',
+]
+export const CONTABILIDADE: Servico[] = [
+  { titulo: 'Abertura de empresa', texto: 'Tipo de sociedade, regime tributário, contrato social, CNPJ, inscrições e alvará, até a primeira nota fiscal.' },
+  { titulo: 'Contabilidade mensal', texto: 'Escrituração, impostos e obrigações em dia, com relatórios de margem e caixa todo mês.' },
+  { titulo: 'Troca de contador', texto: 'Conduzimos a migração junto com o contador atual. Você não precisa fazer a ponte.' },
+  { titulo: 'Regime tributário', texto: 'Simples Nacional, Lucro Presumido ou Lucro Real: a conta de qual sai mais barato para a sua empresa, revista todo ano.' },
+  { titulo: 'Alteração e encerramento', texto: 'Mudança de sócios, endereço, atividade ou capital, e a baixa da empresa quando for a hora.' },
+  { titulo: 'Certidões e regularização', texto: 'CND, parcelamentos e regularização de pendências na Receita, no estado e no município.' },
 ]

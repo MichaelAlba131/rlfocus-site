@@ -1,4 +1,4 @@
-import { useEffect, useState, type FormEvent } from 'react'
+import { useEffect, useRef, useState, type FormEvent } from 'react'
 import { EMAIL, INSTAGRAM, SOCIOS, WHATSAPP_COMERCIAL } from '../conteudo'
 import Conversa from './Conversa'
 
@@ -14,7 +14,13 @@ export default function Contato({ assunto }: { assunto: string }) {
   const [erros, setErros] = useState<(keyof Campos)[]>([])
   const [aviso, setAviso] = useState<{ erro: boolean; texto: string } | null>(null)
 
-  useEffect(() => { if (assunto) setC(x => (x.mensagem.trim() ? x : { ...x, mensagem: assunto })) }, [assunto])
+  // A chamada clicada (reforma, escala, abrir empresa…) escreve o assunto na mensagem, sem apagar o que a pessoa digitou.
+  const ultimoAssunto = useRef('')
+  useEffect(() => {
+    if (!assunto) return
+    setC(x => (!x.mensagem.trim() || x.mensagem === ultimoAssunto.current ? { ...x, mensagem: assunto } : x))
+    ultimoAssunto.current = assunto
+  }, [assunto])
 
   const muda = (k: keyof Campos) => (e: { target: { value: string } }) => setC(x => ({ ...x, [k]: e.target.value }))
 
