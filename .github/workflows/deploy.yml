@@ -1,9 +1,8 @@
-# A cada push na main: build do site e publicação do resultado no branch "deploy".
+# Build do site e publicação no branch "deploy" pelo GitHub (só quando acionado à mão).
+# Enquanto as Actions da conta estiverem bloqueadas por cobrança, use "npm run publicar" (faz o mesmo localmente).
 # O cPanel da HostGator (Git Version Control) puxa o branch "deploy" e copia para o public_html (.cpanel.yml).
 name: Build e publicar no branch deploy
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 permissions:
   contents: write

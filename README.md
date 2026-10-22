@@ -19,9 +19,8 @@ que não seja verdadeira (a empresa é de 2020; os "20 anos" são da carreira de
 
 ## Como vai ao ar (HostGator)
 
-1. Push na `main`.
-2. O GitHub Actions (`.github/workflows/deploy.yml`) faz o build e publica o resultado no branch `deploy`
-   (com o `.cpanel.yml`).
+1. Commit na `main` e `npm run publicar`: faz o build e publica o resultado no branch `deploy`
+   (com o `.cpanel.yml`). O mesmo existe como GitHub Actions (`.github/workflows/deploy.yml`), acionado à mão.
 3. No cPanel da HostGator, **Git Version Control** › repositório `rlfocus-site` › **Pull or Deploy**:
    "Update from Remote" e depois "Deploy HEAD Commit". O `.cpanel.yml` copia os arquivos para
    `/home2/rlfocu11/public_html/`.
