@@ -1,0 +1,7 @@
+# Deploy do cPanel (Git Version Control): copia o site pronto (branch "deploy") para o public_html.
+# O branch "deploy" é gerado pelo GitHub Actions a partir da main (npm run build). Não editar à mão.
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home2/rlfocu11/public_html/
+    - /bin/cp -R index.html assets img .htaccess robots.txt sitemap.xml $DEPLOYPATH
